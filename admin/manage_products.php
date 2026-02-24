@@ -123,10 +123,6 @@ $cats = $pdo->query("SELECT * FROM categories ORDER BY name")->fetchAll();
                 <input type="text" name="name" class="form-control" value="<?= e($edit['name']??'') ?>" required>
             </div>
             <div class="form-group">
-                <label>Slug (URL)</label>
-                <input type="text" name="slug" class="form-control" value="<?= e($edit['slug']??'') ?>" placeholder="auto-generated">
-            </div>
-            <div class="form-group">
                 <label>Category *</label>
                 <select name="category_id" class="form-control" required>
                     <option value="">Select…</option>
