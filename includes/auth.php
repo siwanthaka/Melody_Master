@@ -98,6 +98,7 @@ function hasPhysicalItems(): bool {
 }
 
 function shippingCost(): float {
+    if (!hasPhysicalItems()) return 0.0;
     return cartTotal() >= FREE_SHIPPING_THRESHOLD ? 0.0 : SHIPPING_COST;
 }
 
